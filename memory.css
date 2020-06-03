@@ -1,0 +1,302 @@
+* {
+  padding: 1%;
+  margin: 0;
+}
+
+.gameblock {
+  margin: 5% 0% 0% 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: -moz-max-content;
+}
+.header-area {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.footer-area {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.item-area {
+  background-color: black;
+  border: 1px solid yellow;
+  height: 6rem;
+  width: 5rem;
+  margin: auto auto;
+  cursor:pointer;
+  transition: transform .5s;
+}
+
+.block-size{
+  height: 6rem;
+  width: 5rem;
+}
+
+/* .front:hover{
+  transform: scale(1.2);
+} */
+
+.blockarea {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: -moz-fit-content;
+}
+
+.gamedivlines {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button-area {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+
+.game-outer-wrapper{
+  border: 1px solid #212121;
+}
+
+#background-carousel-landscape,#background-carousel-portrait,
+.wallpaper-wrapper,.carousel-item,.d-block{
+  padding:0%;
+}
+
+body{
+  background: #212121;
+} 
+
+.first-slide-landscape{
+background-image: url("./images/3b8ad2c7b1be2caf24321c852103598a.jpg")
+}
+
+.second-slide-landscape{
+  background-image: url("./images/5gMPrBEm3ienyaYZR9ZEer76aaPtJ-lHo7hKHILg0Zo.png")
+  }
+
+.options-wrapper{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  top:45%;
+}
+
+#background-carousel-landscape,#background-carousel-portrait{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px black solid;
+}
+
+
+.button-shake {
+  animation:button-shake 0.5s ;
+  -moz-animation:button-shake 0.5s ;
+  -webkit-animation:button-shake 0.5s ;
+  -o-animation:button-shake 0.5s ;
+  border-radius:5px;
+  -webkit-border-radius:5px;
+  transition:transform .5s;
+}
+ .button-grow{
+  transition: transform .2s; 
+}
+
+.button-grow:hover {
+  transform: scale(1.5);
+}
+
+  @keyframes button-shake
+  {
+    0% {transform: translateX(0px);}
+    25% {transform: translateX(2px);}
+    50% {transform: translateX(0px);}
+    75% {transform: translateX(-2px);}
+    100% {transform: translateX(0px);}
+  }
+  
+  @-webkit-keyframes button-shake
+  {
+    0% {-webkit-transform: translateX(0px);}
+    25% {-webkit-transform: translateX(2px);}
+    50% {-webkit-transform: translateX(0px);}
+    75% {-webkit-transform: translateX(-2px);}
+    100% {-webkit-transform: translateX(0px);}
+  } 
+  
+  @-moz-keyframes button-shake
+  {
+    0% {-moz-transform: translateX(0px);}
+    25% {-moz-transform: translateX(2px);}
+    50% {-moz-transform: translateX(0px);}
+    75% {-moz-transform: translateX(-2px);}
+    100% {-moz-transform: translateX(0px);}
+    }
+  
+  @-o-keyframes button-shake
+  {
+    0% {transform: translateX(0px);}
+    25% {transform: translateX(2px);}
+    50% {transform: translateX(0px);}
+    75% {transform: translateX(-2px);}
+    100% {transform: translateX(0px);}
+    }
+   
+    .wid-variable{
+      width: 60%;
+    }
+
+    .img-adjust{
+      width: 100%;
+      height: 100%;
+    }
+
+    
+    .flip-card {
+      background-color: transparent;
+      width: 6rem;
+      height: 6rem;
+      perspective: 1000px;
+      margin: auto auto;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px 0 rgba(231, 209, 8, 0.904);
+    }
+    
+
+    /* .flip-card:active .flip-card-inner {
+      transform: rotateY(180deg);
+    } */
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+      background-color: #bbb;
+      color: black;
+      transform: rotateY(0deg);
+      /* animation-play-state: paused; */
+      /* animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards; */
+      transition: ease 0.5s;
+      cursor: pointer;
+    }
+    
+    .flip-card-back {
+      background-color: #2980b9;
+      color: white;
+      transform: rotateY(180deg);
+      /* animation-play-state: paused; */
+      /* animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards; */
+      transition: ease 0.5s;
+    }
+
+
+    .card-flip {
+      animation:card-flip 0.5s ;
+      -moz-animation:card-flip 0.5s ;
+      -webkit-animation:card-flip 0.5s ;
+      -o-animation:card-flip 0.5s ;
+      border-radius:5px;
+      -webkit-border-radius:5px;
+      transition:transform .5s;
+    -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+    animation-fill-mode: forwards;
+    }
+
+    @keyframes card-flip
+    {
+      0% {transform: rotateY(0deg);}
+      100% {transform: rotateY(180deg);}
+    }
+
+    .rev-card-flip {
+      animation:rev-card-flip 0.5s ;
+      -moz-animation:rev-card-flip 0.5s ;
+      -webkit-animation:rev-card-flip 0.5s ;
+      -o-animation:rev-card-flip 0.5s ;
+      border-radius:5px;
+      -webkit-border-radius:5px;
+      transition:transform .5s;
+    -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+    animation-fill-mode: forwards;
+    }
+
+    @keyframes rev-card-flip
+    {
+      0% {transform: rotateY(180deg);}
+      100% {transform: rotateY(0deg);}
+    }
+    
+    @-webkit-keyframes card-flip
+    {
+      0% {-webkit-transform: rotateY(0deg);}
+      100% {-webkit-transform: rotateY(180deg);}
+    } 
+    
+    @-moz-keyframes card-flip
+    {
+      0% {-moz-transform: rotateY(0deg);}
+      100% {-moz-transform: rotateY(180deg);}
+      }
+    
+    @-o-keyframes card-flip
+    {
+      0% {transform: rotateY(0deg);}
+      100% {transform: rotateY(180deg);}
+      }
+     
+    .modal-content{
+      width: 30rem; 
+      margin: auto;
+      border-radius: 28px;
+      color: white;
+      background-color: black;
+    }
+
+
+@media screen and (max-width: 600px){
+  .options-wrapper{
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40%;
+    top:28%;
+  }
+  .flip-card{
+    width: 6rem;
+    height: 7rem;
+    margin: 6px 12px;
+  }
+  .wid-variable{
+    width:100%;
+  }
+  
+}
