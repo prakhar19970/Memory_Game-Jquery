@@ -29,7 +29,7 @@ import {initializeStructure} from './memorygame.js';
      $('.option-btn').click((elem)=>{
       //  elem.target.classList.toggle('button-shake');
       $('.option-btn').attr('disabled',"true");
-      $('#myAudio').append('<source src="./assets/sounds/Blop-Mark_DiAngelo-79054334.mp3" type="audio/mp3">').attr('autoplay',true);
+      $('#myAudio').append('<source src="Blop-Mark_DiAngelo-79054334.mp3" type="audio/mp3">').attr('autoplay',true);
 
       setTimeout(()=>{
         initializeStructure(elem.target.getAttribute('data-size'),elem.target.getAttribute('data-mode'),$(window).width())

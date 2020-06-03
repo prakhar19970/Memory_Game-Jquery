@@ -28,7 +28,7 @@ function generateStructure(currentDivId,gameMode,size){
     initiator(size);
     // console.log($(`${currentDivId}`));
     let structureDiv=$('<div class="game-structure-wrapper wid-variable"></div>')
-    let cardOuter='<div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front front-card"><img src="../assets/images/question-mark-icon-wallpaper-png-favpng-XP5SaTVjJcKwnc6nfkB0tCBT0.jpg"  class="img-adjust"></div><div class="flip-card-back"><img class="item-pic img-adjust"></div></div></div></div>'
+    let cardOuter='<div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front front-card"><img src="question-mark-icon-wallpaper-png-favpng-XP5SaTVjJcKwnc6nfkB0tCBT0.jpg"  class="img-adjust"></div><div class="flip-card-back"><img class="item-pic img-adjust"></div></div></div></div>'
     let structureRow='<div class="structureRow d-flex"></div>'
 
     $(`${currentDivId}`).append(structureDiv);
@@ -44,7 +44,7 @@ function appendCards(card,size){
     let counter=0;
     while(size > 0)
     {
-        console.log(size);
+        // console.log(size);
         $('.structureRow').append(card);
         size--;
         counter++;
@@ -103,14 +103,14 @@ function cardOpen(gameMode){
     let score = 0;
     
     $('body').on('click','.flip-card-front',(elem)=>{
-    console.log(count);
+    // console.log(count);
     let cardbackId=elem.currentTarget.nextElementSibling.firstChild.id
     cardId.push(cardbackId);
     // $('#myAudio').attr('autoplay','true');
     count += 1;
     if (count == 2) {
         $('.flip-card-front').css('pointer-events','none');
-        console.log(cardId[0],cardId[1]);
+        // console.log(cardId[0],cardId[1]);
         if(cardId[0] !== cardId[1])
         {
             if(gameMode !='hard'){
@@ -141,7 +141,7 @@ function cardOpen(gameMode){
     }
     elem.currentTarget.classList.add('card-flip');
     elem.currentTarget.nextElementSibling.classList.add('rev-card-flip');  
-    console.log("score",score);
+    // console.log("score",score);
     // console.log($('.card-flip').length)
     if(!$('.front-card').length)
     {
@@ -154,7 +154,7 @@ function cardOpen(gameMode){
             $('#modal_cont').append(`<p>${score}</p><p>"Hatsoff what a game!!!"</p><p class="text-right">---Developed By---<br>Prakhar Shukla</p>`);
                         }
             setTimeout(()=>{
-                location.href="/templates/index.html"
+                location.href="/index.html"
             },3000)
     }
     })
