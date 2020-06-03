@@ -154,7 +154,7 @@ function cardOpen(gameMode){
             $('#modal_cont').append(`<p>${score}</p><p>"Hatsoff what a game!!!"</p><p class="text-right">---Developed By---<br>Prakhar Shukla</p>`);
                         }
             setTimeout(()=>{
-                location.href="/"
+                location.href="/Memory_Game-Jquery/"
             },3000)
     }
     })
