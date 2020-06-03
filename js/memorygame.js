@@ -97,6 +97,18 @@ function cardOpen(gameMode){
         $('.modal').fadeOut();
         $('.modal-title').empty();
         $('#modal_cont').empty();
+        $('.flip-card-front').css('pointer-events','none');
+        $('.flip-card-back').css('pointer-events','none');
+        $('.flip-card-front').addClass('card-flip');
+        $('.flip-card-back').addClass('rev-card-flip');
+
+        setTimeout(()=>{
+            $('.flip-card-front').removeClass('card-flip');
+            $('.flip-card-back').removeClass('rev-card-flip');
+            $('.flip-card-back').css('pointer-events','auto');
+            
+        $('.flip-card-front').css('pointer-events','auto');
+        },2000)
      })  
     let count = 0;
     let cardId=[];
