@@ -154,7 +154,7 @@ function cardOpen(gameMode){
             $('#modal_cont').append(`<p>${score}</p><p>"Hatsoff what a game!!!"</p><p class="text-right">---Developed By---<br>Prakhar Shukla</p>`);
                         }
             setTimeout(()=>{
-                location.href="/index.html"
+                location.href="/"
             },3000)
     }
     })
