@@ -14,7 +14,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="../js/index.js"></script>
+    <script type="module"  src="../js/index.js"></script>
+    <!-- <script src="../js/jquery.flip.min.js"></script> -->
     <title>Memory Game</title>
   </head>
   <body>
@@ -33,9 +34,9 @@
           </div>
         </div>
         <div class="options-wrapper">
-          <button type="button" class="button-grow option-btn btn btn-dark btn-lg">Easy</button>
-          <button type="button" class="button-grow option-btn btn btn-dark btn-lg">Medium</button>
-          <button type="button" class="button-grow option-btn btn btn-dark btn-lg">Hard</button>
+          <button type="button" class="button-grow option-btn btn btn-dark btn-lg" data-size='4' data-mode='norm'>Normal</button>
+          <button type="button" class="button-grow option-btn btn btn-dark btn-lg" data-size='4' data-mode='hard'>Hard</button>
+          <!-- <button type="button" class="button-grow option-btn btn btn-dark btn-lg" data-size='4'>Hard</button> -->
         </div>
       </div>
 
@@ -49,19 +50,28 @@
           </div>
         </div>
         <div class="options-wrapper">
-          <button type="button" class="option-btn btn btn-dark btn-lg">Easy</button>
-          <button type="button" class="option-btn btn btn-dark btn-lg">Medium</button>
-          <button type="button" class="option-btn btn btn-dark btn-lg">Hard</button>
+          <button type="button" data-size='4' data-mode='norm' class="option-btn btn btn-dark btn-lg">Normal</button>
+          <!-- <button type="button" class="option-btn btn btn-dark btn-lg">Medium</button> -->
+          <button type="button" data-size='4' data-mode='hard' class="option-btn btn btn-dark btn-lg">Hard</button>
         </div>
       </div>
       <footer class="footer-area"></footer>
     </div>
     </div>
-    
-    <!-- <script src="memory.js"></script> -->
-    
-    <!-- <script src="../js/jquery.flip.min.js"></script> --> 
   </body>
-  
+  <div class="modal" id="modal_score" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" >
+            <div class="modal-header">
+                <h5 class="modal-title">
+                </h5>
+            </div>
+            <div class="modal-body" id="modal_cont">
+            </div>
+        </div>
+    </div>
+</div>
+<audio id="myAudio" preload="auto">
+</audio>
 </html>
 

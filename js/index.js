@@ -1,3 +1,4 @@
+import {initializeStructure} from './memorygame.js';
 
     $(document).ready(()=>{
         $('#background-carousel-landscape').hide();
@@ -26,7 +27,15 @@
        })
  
      $('.option-btn').click((elem)=>{
-       elem.target.classList.toggle('button-shake');     
+      //  elem.target.classList.toggle('button-shake');
+      $('.option-btn').attr('disabled',"true");
+      $('#myAudio').append('<source src="../assets/sounds/Blop-Mark_DiAngelo-79054334.mp3" type="audio/mp3">').attr('autoplay',true);
+
+      setTimeout(()=>{
+        initializeStructure(elem.target.getAttribute('data-size'),elem.target.getAttribute('data-mode'),$(window).width())
+        $('.option-btn').attr('disabled',"false");
+      },2000);  
      })
+
    })
  
